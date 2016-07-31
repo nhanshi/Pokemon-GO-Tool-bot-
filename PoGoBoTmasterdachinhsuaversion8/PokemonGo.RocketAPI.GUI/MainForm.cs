@@ -810,7 +810,7 @@ namespace PokemonGo.RocketAPI.GUI
         }
 
         //lựa banh theo captureProbability
-        private async Task<MiscEnums.Item> GetBestBall(float? captureProbability, MapPokemon pokemonCapturing,int minGreatBall, int minUltraBall,int minMasterBall)
+        private async Task<MiscEnums.Item> GetBestBall(float? captureProbability, MapPokemon pokemonCapturing, int minGreatBall, int minUltraBall, int minMasterBall)
         {
             var pokeBallsCount = await _inventory.GetItemAmountByType(MiscEnums.Item.ITEM_POKE_BALL);
             var greatBallsCount = await _inventory.GetItemAmountByType(MiscEnums.Item.ITEM_GREAT_BALL);
@@ -832,7 +832,8 @@ namespace PokemonGo.RocketAPI.GUI
                 pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Grimer ||
                 pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Geoduge ||
                 pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Oddish ||
-                pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Growlithe)
+                pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Growlithe ||
+                pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Dratini)
             {
                 //dong if qua dai co the se xay ra loi trong tuong lai luc do them Delay
                 //vao
@@ -860,7 +861,9 @@ namespace PokemonGo.RocketAPI.GUI
                 pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Golem ||
                 pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Gloom ||
                 pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Vileplume ||
-                pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Arcanine)
+                pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Arcanine||
+                pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Dragonair||
+                pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Dragonite)
             {
                 //dong if qua dai co the se xay ra loi trong tuong lai luc do them Delay
                 //vao
@@ -1067,7 +1070,9 @@ namespace PokemonGo.RocketAPI.GUI
                             pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Grimer ||
                             pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Geoduge ||
                             pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Oddish ||
-                            pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Growlithe)
+                            pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Growlithe||
+                            pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Dragonair ||
+                            pokemonCapturing.PokemonId == PokemonGo.RocketAPI.GeneratedCode.PokemonId.Dragonite)
                         {
                             //dong if qua dai co the se xay ra loi trong tuong lai luc do them Delay
                             //vao
